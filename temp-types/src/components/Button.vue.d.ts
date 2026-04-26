@@ -1,0 +1,42 @@
+import type { Component } from "vue";
+type Variant = "filled" | "outline";
+type Color = "primary" | "success" | "warning" | "error";
+type Size = "sm" | "md" | "lg";
+interface Props {
+    label?: string;
+    variant?: Variant;
+    color?: Color;
+    size?: Size;
+    disabled?: boolean;
+    loading?: boolean;
+    block?: boolean;
+    icon?: string | Component;
+}
+declare var __VLS_1: {}, __VLS_8: {};
+type __VLS_Slots = {} & {
+    icon?: (props: typeof __VLS_1) => any;
+} & {
+    default?: (props: typeof __VLS_8) => any;
+};
+declare const __VLS_base: import("vue").DefineComponent<Props, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+    click: (event: MouseEvent) => any;
+}, string, import("vue").PublicProps, Readonly<Props> & Readonly<{
+    onClick?: ((event: MouseEvent) => any) | undefined;
+}>, {
+    icon: string | Component;
+    label: string;
+    variant: Variant;
+    color: Color;
+    size: Size;
+    disabled: boolean;
+    loading: boolean;
+    block: boolean;
+}, {}, {}, {}, string, import("vue").ComponentProvideOptions, false, {}, any>;
+declare const __VLS_export: __VLS_WithSlots<typeof __VLS_base, __VLS_Slots>;
+declare const _default: typeof __VLS_export;
+export default _default;
+type __VLS_WithSlots<T, S> = T & {
+    new (): {
+        $slots: S;
+    };
+};
