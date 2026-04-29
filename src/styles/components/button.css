@@ -64,6 +64,20 @@
   align-items: center;
 }
 
+/* 图标容器额外优化 */
+.mg-button-icon {
+  flex-shrink: 0;
+  line-height: 0; /* 消除行高影响 */
+}
+
+/* 图标内容 */
+.mg-button-icon svg,
+.mg-button-icon .iconify {
+  display: block;
+  width: 1em;
+  height: 1em;
+}
+
 /* ========== 变体：filled ========== */
 .mg-button-filled-primary {
   background-color: var(--ui-primary);

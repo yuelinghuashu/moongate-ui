@@ -1,4 +1,10 @@
-/* ===== 🌙 原子工具类 ===== */
+/* 全局重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 
 /* ---------- 核心契约 ---------- */
 :root {
@@ -72,38 +78,4 @@
 .radius-0,
 .radius-none {
   border-radius: 0;
-}
-
-/* ---------- 布局工具类 ---------- */
-.flex {
-  display: flex;
-}
-.inline-flex {
-  display: inline-flex;
-}
-.items-center {
-  align-items: center;
-}
-.justify-between {
-  justify-content: space-between;
-}
-/* ... 其他布局类 ... */
-
-/* ---------- 间距工具类 ---------- */
-.gap-1 {
-  gap: var(--ui-spacing-xs);
-}
-.gap-2 {
-  gap: var(--ui-spacing-sm);
-}
-/* ... 其他间距类 ... */
-
-/* ---------- 响应式补丁 ---------- */
-@media (max-width: 768px) {
-  .sm-hidden {
-    display: none !important;
-  }
-  .sm-flex-col {
-    flex-direction: column !important;
-  }
 }

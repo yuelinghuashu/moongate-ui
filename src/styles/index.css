@@ -27,10 +27,3 @@
 @import "./components/skeleton.css";
 @import "./components/tabs.css";
 @import "./components/tooltip.css";
-
-/* 全局重置 */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}

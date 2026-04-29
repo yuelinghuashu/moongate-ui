@@ -8,13 +8,14 @@ export default defineConfig({
     lib: {
       entry: resolve(__dirname, 'src/index.ts'),
       name: 'MoongateUI',
-      fileName: (format) => `moongate-ui.${format}.js`,
-      formats: ['es', 'umd'],
+      formats: ['es', 'cjs'],
+      fileName: (format) => `index.${format === 'es' ? 'mjs' : 'cjs'}`,
     },
     rollupOptions: {
       external: ['vue'],
       output: {
         globals: { vue: 'Vue' },
+        assetFileNames: 'style.css',
       },
     },
     cssCodeSplit: false,
