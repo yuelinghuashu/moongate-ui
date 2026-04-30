@@ -59,14 +59,6 @@ const loadData = () => {
 </template>
 ```
 
-## 属性透传
-
-支持透传 `id`、`data-*`、`aria-*` 等原生属性。
-
-```vue
-<Skeleton id="article-skeleton" data-testid="loading" aria-label="内容加载中" />
-```
-
 ## API
 
 ### Props
@@ -80,19 +72,6 @@ const loadData = () => {
 | `avatarSize`  | `'sm' \| 'md' \| 'lg'`          | `'md'`      | 头像尺寸                  |
 | `title`       | `boolean`                       | `false`     | 第一行是否为标题（更宽）  |
 | `rowSize`     | `'sm' \| 'md' \| 'lg'`          | `'md'`      | 行宽度（仅 default 模式） |
-
-## 样式定制
-
-可通过覆盖以下 CSS 变量定制样式：
-
-```css
---ui-bg-muted        /* 骨架基础色 */
---ui-bg-hover        /* 骨架高亮色（动画） */
---ui-spacing-sm      /* 间距 */
---ui-spacing-md
---ui-spacing-lg
---ui-radius-sm       /* 圆角 */
-```
 
 ## 尺寸对照
 

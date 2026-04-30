@@ -66,24 +66,6 @@
 | `update:modelValue` | `(value: boolean)` | 状态变化时触发   |
 | `change`            | `(event: Event)`   | 原生 change 事件 |
 
-## 样式定制
-
-可通过覆盖以下 CSS 变量定制样式：
-
-```css
---ui-spacing-xs      /* 间距 */
---ui-spacing-sm
---ui-spacing-md
---ui-border          /* 轨道边框颜色 */
---ui-bg-muted        /* 轨道背景色 */
---ui-primary         /* 选中时轨道颜色 */
---ui-error           /* 错误状态边框色 */
---ui-text-dim        /* 滑块颜色 */
---ui-physics-focus-ring  /* 聚焦环宽度 */
---ui-typography-size-small
---ui-typography-size-body
-```
-
 ## 注意事项
 
 - Switch 本质是一个特殊样式的 Checkbox，行为一致

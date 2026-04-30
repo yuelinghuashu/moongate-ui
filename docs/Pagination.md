@@ -45,25 +45,6 @@
 | `update:currentPage` | `(page: number)` | 页码变化时触发（v-model） |
 | `change` | `(page: number)` | 页码变化时触发 |
 
-## 样式定制
-
-可通过覆盖以下 CSS 变量定制样式：
-
-```css
---ui-spacing-xs      /* 间距 */
---ui-spacing-sm
---ui-spacing-md
---ui-spacing-lg
---ui-border          /* 按钮边框颜色 */
---ui-primary         /* 当前页码颜色 */
---ui-text            /* 按钮文字颜色 */
---ui-text-dim        /* 分隔符和总页数颜色 */
---ui-bg-muted        /* 输入框背景色 */
---ui-physics-focus-ring /* 聚焦环宽度 */
---ui-typography-size-small
---ui-typography-size-body
-```
-
 ## 注意事项
 
 - 页码显示格式为 `当前页 / 总页数`，简洁明了

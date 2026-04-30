@@ -50,19 +50,6 @@
 | --------- | ------------------------------ |
 | `default` | 分割线中间的文字（仅水平模式） |
 
-## 样式定制
-
-可通过覆盖以下 CSS 变量定制样式：
-
-```css
---ui-border                     /* 分割线颜色 */
---ui-physics-border-crease      /* 边框宽度，默认 1px */
---ui-spacing-xl                 /* 水平分割线上下间距 */
---ui-spacing-md                 /* 垂直分割线左右间距 */
---ui-typography-size-small      /* 带文字时的字体大小 */
---ui-text-dim                   /* 带文字时的文字颜色 */
-```
-
 ## 注意事项
 
 - 水平分割线默认占据整行，上下间距为 `--ui-spacing-xl`

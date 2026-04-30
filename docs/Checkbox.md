@@ -108,24 +108,6 @@ const options = [
 | `update:modelValue` | `(value: boolean \| any[])` | 值变化时触发     |
 | `change`            | `(event: Event)`            | 原生 change 事件 |
 
-## 样式定制
-
-可通过覆盖以下 CSS 变量定制样式：
-
-```css
---ui-spacing-xs     /* 间距 */
---ui-spacing-sm
---ui-spacing-md
---ui-border         /* 边框颜色 */
---ui-bg-muted       /* 背景色 */
---ui-primary        /* 选中时背景色 */
---ui-error          /* 错误状态边框色 */
---ui-radius-sm      /* 圆角 */
---ui-physics-focus-ring /* 聚焦环宽度 */
---ui-typography-size-small
---ui-typography-size-body
-```
-
 ## 注意事项
 
 - 复选框默认使用自定义样式，不依赖浏览器原生样式

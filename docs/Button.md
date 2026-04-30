@@ -125,27 +125,6 @@
 | ------- | --------------------- | -------------------------------- |
 | `click` | `(event: MouseEvent)` | 点击回调（禁用或加载时不会触发） |
 
-## 样式定制
-
-Button 组件基于 CSS 变量设计，可通过覆盖以下变量进行主题定制：
-
-```css
-/* 颜色变量 */
---ui-primary
---ui-success
---ui-warning
---ui-error
-
-/* 布局变量 */
---ui-spacing-sm
---ui-spacing-md
---ui-spacing-lg
---ui-spacing-xl
---ui-radius-none
---ui-motion-duration-neural
---ui-typography-size-body
-```
-
 ## 注意事项
 
 - `label` prop 与默认插槽同时存在时，**默认插槽优先**

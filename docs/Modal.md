@@ -87,32 +87,6 @@
 | `open`              | —                  | 弹窗打开时触发     |
 | `close`             | —                  | 弹窗关闭时触发     |
 
-### 透传 Attributes
-
-通过 `v-bind="$attrs"` 支持以下原生属性：
-
-| 属性     | 说明           |
-| -------- | -------------- |
-| `id`     | 弹窗 ID        |
-| `data-*` | 自定义数据属性 |
-| `aria-*` | 无障碍属性     |
-
-## 样式定制
-
-可通过覆盖以下 CSS 变量定制样式：
-
-```css
---ui-z-index-modal    /* 层级，默认 1000 */
---ui-bg-elevated      /* 弹窗背景色 */
---ui-border           /* 边框颜色 */
---ui-text             /* 文字颜色 */
---ui-text-dim         /* 关闭按钮颜色 */
---ui-primary          /* 关闭按钮悬停颜色 */
---ui-spacing-lg       /* 内边距 */
---ui-spacing-sm       /* 底部按钮间距 */
---ui-motion-duration-fluid /* 动画时长 */
-```
-
 ## 尺寸对照
 
 | 尺寸 | 最大宽度 | 适用场景         |

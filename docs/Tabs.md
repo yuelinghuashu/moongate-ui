@@ -135,35 +135,6 @@ interface TabItem {
 | `update:modelValue` | `(value: number)`               | 激活索引变化时触发（v-model） |
 | `change`            | `(index: number, tab: TabItem)` | 切换标签页时触发              |
 
-### 透传 Attributes
-
-通过 `v-bind="$attrs"` 支持以下原生属性：
-
-| 属性     | 说明           |
-| -------- | -------------- |
-| `id`     | 标签页组件 ID  |
-| `data-*` | 自定义数据属性 |
-| `aria-*` | 无障碍属性     |
-
-## 样式定制
-
-可通过覆盖以下 CSS 变量定制样式：
-
-```css
---ui-border           /* 边框颜色 */
---ui-primary          /* 激活标签颜色 */
---ui-text-dim         /* 默认标签颜色 */
---ui-bg-muted         /* 卡片模式背景色 */
---ui-bg-elevated      /* 卡片模式激活背景色 */
---ui-spacing-xs       /* 间距 */
---ui-spacing-sm
---ui-spacing-md
---ui-spacing-lg
---ui-radius-sm        /* 圆角 */
---ui-typography-size-small
---ui-typography-size-body
-```
-
 ## 懒加载工作原理
 
 | 模式                  | 行为                                           | 适用场景         |

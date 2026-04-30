@@ -23,7 +23,7 @@
           <span v-else-if="icon">{{ icon }}</span>
         </slot>
       </span>
-      <span class="mg-button-label">
+      <span v-if="hasLabel" class="mg-button-label">
         <slot>{{ label }}</slot>
       </span>
     </template>
@@ -36,6 +36,7 @@ import type { Component } from "vue"
 
 const slots = useSlots()
 const hasIconSlot = computed(() => !!slots.icon)
+const hasLabel = computed(() => !!props.label || !!slots.default)
 
 type Variant = "filled" | "outline"
 type Color = "primary" | "success" | "warning" | "error"
@@ -60,7 +61,6 @@ const props = withDefaults(defineProps<Props>(), {
   disabled: false,
   loading: false,
   block: false,
-  icon: "",
 })
 
 const emit = defineEmits<{

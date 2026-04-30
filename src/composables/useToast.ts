@@ -20,19 +20,20 @@ let toastContainer: HTMLDivElement | null = null
 let currentToastApp: ReturnType<typeof createApp> | null = null
 
 const showToast = (options: ToastOptions) => {
-  // 移除已有的 Toast
+  // 完全销毁之前的实例和容器
   if (currentToastApp) {
     currentToastApp.unmount()
-    if (toastContainer) {
-      toastContainer.innerHTML = ""
-    }
+    currentToastApp = null
   }
 
-  // 创建容器
-  if (!toastContainer) {
-    toastContainer = document.createElement("div")
-    document.body.appendChild(toastContainer)
+  if (toastContainer) {
+    toastContainer.remove()
+    toastContainer = null
   }
+
+  // 创建新容器
+  toastContainer = document.createElement("div")
+  document.body.appendChild(toastContainer)
 
   // 创建 Toast 组件实例
   const toastApp = createApp(Toast, {
@@ -44,28 +45,25 @@ const showToast = (options: ToastOptions) => {
     position: options.position ?? "top",
     icon: options.icon ?? "",
     onClose: () => {
-      if (currentToastApp) {
-        currentToastApp.unmount()
+      toastApp.unmount()
+      if (toastContainer) {
+        toastContainer.remove()
+        toastContainer = null
+      }
+      currentToastApp = null
+    },
+    "onUpdate:modelValue": (val: boolean) => {
+      if (!val) {
+        toastApp.unmount()
         if (toastContainer) {
-          toastContainer.innerHTML = ""
+          toastContainer.remove()
+          toastContainer = null
         }
         currentToastApp = null
       }
     },
-    "onUpdate:modelValue": (val: boolean) => {
-      if (!val) {
-        if (currentToastApp) {
-          currentToastApp.unmount()
-          if (toastContainer) {
-            toastContainer.innerHTML = ""
-          }
-          currentToastApp = null
-        }
-      }
-    },
   })
 
-  toastContainer.innerHTML = ""
   toastApp.mount(toastContainer)
   currentToastApp = toastApp
 }

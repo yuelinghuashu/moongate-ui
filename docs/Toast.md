@@ -102,27 +102,6 @@ toast.show({
 | `position` | `'top' \| 'bottom'`                           | `'top'`  | 显示位置   |
 | `icon`     | `string`                                      | `''`     | 自定义图标 |
 
-## 样式定制
-
-可通过覆盖以下 CSS 变量定制样式：
-
-```css
---ui-z-index-toast    /* 层级，默认 2000 */
---ui-bg-elevated      /* 背景色 */
---ui-border           /* 边框颜色 */
---ui-text             /* 文字颜色 */
---ui-text-dim         /* 关闭按钮颜色 */
---ui-primary          /* 信息类型颜色 */
---ui-success          /* 成功类型颜色 */
---ui-warning          /* 警告类型颜色 */
---ui-error            /* 错误类型颜色 */
---ui-spacing-sm       /* 内边距 */
---ui-spacing-lg
---ui-spacing-xl       /* 位置偏移 */
---ui-radius-sm        /* 圆角 */
---ui-motion-duration-neural /* 动画时长 */
-```
-
 ## 注意事项
 
 - 推荐使用 `useToast` 函数式调用，代码更简洁

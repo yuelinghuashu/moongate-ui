@@ -99,26 +99,6 @@ const value = ref("")
 | `focus`             | `(event: FocusEvent)` | 获得焦点时触发        |
 | `blur`              | `(event: FocusEvent)` | 失去焦点时触发        |
 
-## 样式定制
-
-可通过覆盖以下 CSS 变量定制样式：
-
-```css
---ui-bg-muted           /* 背景色 */
---ui-border             /* 边框颜色 */
---ui-text               /* 文字颜色 */
---ui-text-muted         /* 占位符颜色 */
---ui-primary            /* 聚焦时的边框色 */
---ui-error              /* 错误状态边框色 */
---ui-physics-focus-ring /* 聚焦环宽度 */
---ui-spacing-xs         /* 内边距 */
---ui-spacing-sm
---ui-spacing-md
---ui-spacing-lg
---ui-typography-size-small
---ui-typography-size-body
-```
-
 ## 注意事项
 
 - 输入框默认宽度 100%，填满父容器

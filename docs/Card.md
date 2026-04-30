@@ -115,24 +115,6 @@
 | `default` | 卡片主体内容         |
 | `footer`  | 卡片底部内容（可选） |
 
-## 样式定制
-
-Card 组件使用以下 CSS 变量，可全局或局部覆盖以定制样式：
-
-```css
-/* 卡片背景色（默认使用 elevated 背景） */
---ui-bg-elevated
-
-/* 头部底部边框颜色 */
---ui-border
-
-/* 悬停效果相关变量 */
---ui-physics-tidal-offset   /* 上浮距离，默认 4px */
---ui-glow-alpha             /* 月晕透明度，浅色 0.06，深色 0.12 */
---ui-motion-duration-lunar /* 动画时长，默认 600ms */
---ui-motion-easing-lunar   /* 缓动曲线，默认 cubic-bezier(0.25, 1, 0.5, 1) */
-```
-
 ## 注意事项
 
 - 卡片默认**无边框、无圆角**，符合 Moongate 的直角美学

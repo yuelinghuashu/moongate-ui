@@ -86,37 +86,6 @@ interface SelectOption {
 | `update:modelValue` | `(value: string \| number)` | 值变化时触发 |
 | `change` | `(event: Event)` | 原生 change 事件 |
 
-### 透传 Attributes
-
-通过 `v-bind="$attrs"` 支持以下原生属性：
-
-| 属性 | 说明 |
-|------|------|
-| `id` | 选择框 ID |
-| `name` | 选择框名称 |
-| `data-*` | 自定义数据属性 |
-| `aria-*` | 无障碍属性 |
-
-## 样式定制
-
-可通过覆盖以下 CSS 变量定制样式：
-
-```css
---ui-bg-muted           /* 背景色 */
---ui-border             /* 边框颜色 */
---ui-text               /* 文字颜色 */
---ui-primary            /* 聚焦时的边框色 */
---ui-error              /* 错误状态边框色 */
---ui-physics-focus-ring /* 聚焦环宽度 */
---ui-spacing-xs         /* 内边距 */
---ui-spacing-sm
---ui-spacing-md
---ui-spacing-lg
---ui-spacing-xl
---ui-typography-size-small
---ui-typography-size-body
-```
-
 ## 注意事项
 
 - Select 使用原生 `<select>` 元素，支持键盘导航

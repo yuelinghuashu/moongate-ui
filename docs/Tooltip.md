@@ -82,29 +82,6 @@ Tooltip 提示组件，用于在鼠标悬停时显示提示信息。
 | `default` | 触发元素的默认插槽（优先级低于 `trigger`） |
 | `content` | 自定义提示内容（优先级高于 `content` prop） |
 
-### 透传 Attributes
-
-通过 `v-bind="$attrs"` 支持以下原生属性：
-
-| 属性 | 说明 |
-|------|------|
-| `id` | Tooltip 组件 ID |
-| `data-*` | 自定义数据属性 |
-
-## 样式定制
-
-可通过覆盖以下 CSS 变量定制样式：
-
-```css
---ui-z-index-tooltip   /* 层级，默认 1500 */
---ui-bg-elevated      /* 背景色 */
---ui-text             /* 文字颜色 */
---ui-typography-size-small /* 字体大小 */
---ui-radius-sm        /* 圆角 */
---ui-spacing-xs       /* 内边距 */
---ui-spacing-sm
-```
-
 ## 注意事项
 
 - Tooltip 默认在 hover 时触发，不支持 click 或 focus 模式

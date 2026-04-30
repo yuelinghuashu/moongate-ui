@@ -65,30 +65,6 @@
 | --------- | ------------------------------ |
 | `default` | 徽章内容（优先级高于 `label`） |
 
-## 样式定制
-
-Badge 组件基于 CSS 变量设计，可通过覆盖以下变量定制样式：
-
-```css
-/* 间距变量 */
---ui-spacing-xs
---ui-spacing-sm
---ui-spacing-md
-
-/* 字体变量 */
---ui-typography-size-small
---ui-typography-size-code
-
-/* 圆角变量 */
---ui-radius-sm
-
-/* 颜色变量（影响所有变体） */
---ui-primary
---ui-success
---ui-warning
---ui-error
-```
-
 ## 注意事项
 
 - 徽章默认使用半透明背景 + 主题色文字，符合 Moongate 的克制美学
