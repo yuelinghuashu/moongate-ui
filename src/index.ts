@@ -16,12 +16,18 @@ import Tabs from './components/Tabs.vue'
 import Skeleton from './components/Skeleton.vue'
 import Tooltip from './components/Tooltip.vue'
 import { useToast } from './composables/useToast'
+import Container from './components/Container.vue'
+import Header from './components/Header.vue'
+import Main from './components/Main.vue'
+import Footer from './components/Footer.vue'
+import Hero from './components/Hero.vue'
 import './styles/index.css'
 
 const components = [
   Button, Card, Badge, Divider, Input, Textarea,
   Checkbox, Radio, Switch, Select, Pagination,
   Modal, Toast, Tabs, Skeleton, Tooltip,
+  Container, Header, Main, Footer, Hero
 ]
 
 export const install: Plugin = (app: App) => {
@@ -51,4 +57,9 @@ export {
   Skeleton,
   Tooltip,
   useToast,
+  Container,
+  Header,
+  Main,
+  Footer,
+  Hero
 }

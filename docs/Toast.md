@@ -33,6 +33,73 @@ toast.show({
 </script>
 ```
 
+## Nuxt 环境使用
+
+在 Nuxt 中，Toast 涉及 DOM 操作，需要确保只在客户端执行：
+
+```vue
+<script setup>
+import { useToast } from "moongate-ui"
+
+const toast = useToast()
+
+const handleSuccess = () => {
+  // 方式一：使用 import.meta.client
+  if (import.meta.client) {
+    toast.success("操作成功")
+  }
+}
+
+const handleError = () => {
+  // 方式二：使用 process.client
+  if (process.client) {
+    toast.error("操作失败")
+  }
+}
+</script>
+
+<template>
+  <Button @click="handleSuccess" label="成功" />
+  <Button @click="handleError" label="错误" />
+</template>
+```
+
+### Nuxt 插件方式（推荐）
+
+创建 `plugins/toast.client.ts`：
+
+```typescript
+import { useToast as useToastCore } from "moongate-ui"
+
+export default defineNuxtPlugin(() => {
+  const toast = useToastCore()
+  
+  return {
+    provide: {
+      toast,
+    },
+  }
+})
+```
+
+然后在组件中使用：
+
+```vue
+<script setup>
+const { $toast } = useNuxtApp()
+
+const handleClick = () => {
+  $toast.success("操作成功")
+}
+</script>
+
+<template>
+  <Button @click="handleClick" label="显示提示" />
+</template>
+```
+
+> **注意**：插件文件名必须包含 `.client` 后缀，确保只在客户端执行。
+
 ## 组件式调用
 
 ```vue
@@ -105,6 +172,8 @@ toast.show({
 ## 注意事项
 
 - 推荐使用 `useToast` 函数式调用，代码更简洁
+- **Nuxt 环境中**：需要确保在客户端执行，使用 `if (import.meta.client)` 判断
+- **Nuxt 插件**：建议使用 `.client.ts` 后缀，或使用 `import.meta.client` 判断
 - 同时显示多个通知时会堆叠显示（后出现的在下方）
 - 通知会自动消失，也可手动关闭（需启用 `closable`）
 - 支持顶部和底部两种位置

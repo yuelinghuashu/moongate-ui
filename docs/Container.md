@@ -28,6 +28,18 @@
 <Container size="xl">
   <p>最大宽度 1280px</p>
 </Container>
+
+<Container size="2xl">
+  <p>最大宽度 1536px</p>
+</Container>
+
+<Container size="3xl">
+  <p>最大宽度 1920px</p>
+</Container>
+
+<Container size="full">
+  <p>最大宽度 100%，占满整行</p>
+</Container>
 ```
 
 ## API
@@ -36,7 +48,7 @@
 
 | 属性 | 类型 | 默认值 | 说明 |
 |------|------|--------|------|
-| `size` | `'sm' \| 'md' \| 'lg' \| 'xl'` | `'lg'` | 容器最大宽度 |
+| `size` | `'sm' \| 'md' \| 'lg' \| 'xl' \| '2xl' \| '3xl' \| 'full'` | `'lg'` | 容器最大宽度 |
 
 ### Slots
 
@@ -44,8 +56,20 @@
 |------|------|
 | `default` | 容器内容 |
 
+## 尺寸对照表
+
+| 尺寸 | 最大宽度 | 适用场景 |
+|------|----------|----------|
+| `sm` | 640px | 窄内容（侧边栏） |
+| `md` | 768px | 平板 |
+| `lg` | 1024px | 笔记本（默认） |
+| `xl` | 1280px | 标准桌面 |
+| `2xl` | 1536px | 大屏幕 |
+| `3xl` | 1920px | 2K 屏幕 |
+| `full` | 100% | 全宽（无限制） |
+
 ## 注意事项
 
 - Container 默认使用 `--ui-spacing-lg` 作为左右内边距
-- 尺寸预设：sm(640px)、md(768px)、lg(1024px)、xl(1280px)
+- `full` 模式下 `max-width` 为 `100%`，容器会填满父容器宽度
 - Container 不包含背景色，只负责宽度和居中

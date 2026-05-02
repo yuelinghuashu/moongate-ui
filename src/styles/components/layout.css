@@ -18,6 +18,15 @@
 .mg-container-xl {
   max-width: 1280px;
 }
+.mg-container-2xl {
+  max-width: 1536px;
+}
+.mg-container-3xl {
+  max-width: 1920px;
+}
+.mg-container-full {
+  max-width: 100%;
+}
 
 .mg-layout-header {
   width: 100%;

@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-type Size = "sm" | "md" | "lg" | "xl"
+type Size = 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | 'full'
 
 interface Props {
   size?: Size
